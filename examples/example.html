@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>악센트</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
+	<meta name="keywords"  content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
+	<meta name="Resource-type" content="Document" />
+
+	
+	<link rel="stylesheet" type="text/css" href="../jquery.multiscroll.css" />		
+	<link rel="stylesheet" type="text/css" href="examples.css" />		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="../jquery.multiscroll.js"></script>
+
+	<script type="text/javascript">
+	 $(document).ready(function() {
+            $('#myContainer').multiscroll({
+            	sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF'],
+            	anchors: ['first', 'second', 'third'],
+            	menu: '#menu',
+            	navigation: true,
+            	navigationTooltips: ['1악장', '2악장', '3악장'],
+            	loopBottom: true,
+            	loopTop: true
+            });
+        });
+    </script>
+</head>
+<body>
+
+
+<ul id="menu">
+	<li data-menuanchor="first"><a href="#first">1악장</a></li>
+	<li data-menuanchor="second"><a href="#second">2악장</a></li>
+	<li data-menuanchor="third"><a href="#third">3악장</a></li>
+</ul>
+
+<div id="myContainer">
+
+	<div class="ms-left">
+		<div class="ms-section" id="left1">
+			<img src = "sad.jpg" height="100%" width ="100%">
+		</div>
+
+		<div class="ms-section" id="left2">
+			<img src = "asd.jpg" height="100%" width ="100%">
+		</div>
+
+		<div class="ms-section" id="left3">
+			<img src = "asd2.jpg" height="100%" width ="100%">
+		</div>
+	</div>
+	
+	<div class="ms-right">
+		<div class="ms-section" id="right1">
+			<div>
+			<img src = "sad1.jpg" height="100%" width ="100%">
+			<audio src = "song.mp3"  id ="audiosong" controls>
+			</div>
+		</div>
+
+		<div class="ms-section" id="right2">
+			<img src ="asd1.jpg" height = "100%" width = "100%">
+		</div>
+
+		<div class="ms-section" id="right3">
+			<img src ="asd3.jpg" height = "100%" width = "100%">
+		</div>
+
+	</div>	
+</div>
+
+</body>
+</html>
